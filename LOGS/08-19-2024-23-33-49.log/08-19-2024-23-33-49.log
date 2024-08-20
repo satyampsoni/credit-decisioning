@@ -1,0 +1,22 @@
+[2024-08-19 23:33:50,907 - INFO - model_train -  >>>> stage Training <<<< started !]
+[2024-08-19 23:33:50,982 - ERROR - model_train - could not convert string to float: '3+']
+Traceback (most recent call last):
+  File "/home/aman123lug/Desktop/credit-decisioning/src/model_train.py", line 65, in <module>
+    obj3.training(preprocess_path)
+  File "/home/aman123lug/Desktop/credit-decisioning/src/model_train.py", line 28, in training
+    dtree.fit(X_train, y_train)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/sklearn/tree/_classes.py", line 1009, in fit
+    super()._fit(
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/sklearn/tree/_classes.py", line 252, in _fit
+    X, y = self._validate_data(
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/sklearn/base.py", line 645, in _validate_data
+    X = check_array(X, input_name="X", **check_X_params)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1012, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/sklearn/utils/_array_api.py", line 751, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/pandas/core/generic.py", line 2153, in __array__
+    arr = np.asarray(values, dtype=dtype)
+ValueError: could not convert string to float: '3+'

@@ -1,0 +1,16 @@
+[2024-08-19 23:24:29,024 - INFO - preprocess -  >>>> stage Data Preprocessing <<<< started !]
+[2024-08-19 23:24:29,027 - ERROR - preprocess - "[''] not found in axis"]
+Traceback (most recent call last):
+  File "/home/aman123lug/Desktop/credit-decisioning/src/preprocess.py", line 47, in <module>
+    preprocess_data = obj.preprocess_data(df)
+  File "/home/aman123lug/Desktop/credit-decisioning/src/preprocess.py", line 14, in preprocess_data
+    data.drop(columns=["Loan_ID", "Credit_History", ""])
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/pandas/core/frame.py", line 5581, in drop
+    return super().drop(
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/pandas/core/generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/pandas/core/generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/home/aman123lug/Desktop/credit-decisioning/venv/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "[''] not found in axis"

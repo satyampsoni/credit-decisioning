@@ -1,0 +1,80 @@
+/* General styling for the app */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Styling for the main title */
+h1 {
+    color: #73ba25;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the subtitle */
+h2 {
+    color: #81c13b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styling for the quote */
+.quote {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Container for the form */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Styling for form rows */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Styling for select boxes and text inputs */
+select, input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Warning message styling */
+.stAlert {
+    background-color: #0a0909;
+    color: #5a1018;
+    border-color: #000000;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+}

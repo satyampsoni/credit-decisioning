@@ -1,0 +1,18 @@
+[2024-08-20 16:05:37,238 - INFO - train -  >>>> stage Training <<<< started !]
+[2024-08-20 16:05:37,239 - ERROR - train - [Errno 2] No such file or directory: 'data/preprocess_data.csv']
+Traceback (most recent call last):
+  File "/home/satyampsoni/Desktop/credit-decisioning-final/src/train.py", line 69, in <module>
+    obj3.training(preprocess_path)
+  File "/home/satyampsoni/Desktop/credit-decisioning-final/src/train.py", line 21, in training
+    preprocess_data = pd.read_csv(path)
+  File "/home/satyampsoni/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/satyampsoni/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/satyampsoni/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/satyampsoni/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home/satyampsoni/.local/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/preprocess_data.csv'

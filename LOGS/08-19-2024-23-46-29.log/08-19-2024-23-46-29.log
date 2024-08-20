@@ -1,0 +1,8 @@
+[2024-08-19 23:46:32,181 - INFO - model_train -  >>>> stage Training <<<< started !]
+[2024-08-19 23:46:32,320 - INFO - model_train -  training successfull !]
+[2024-08-19 23:46:32,333 - INFO - model_train -  MLflow log_metric saved !]
+[2024-08-19 23:46:32,333 - INFO - model_train -  metrics saved !]
+[2024-08-19 23:46:32,334 - INFO - model_train -  model saved !]
+[2024-08-19 23:46:32,337 - INFO - model_train -  >>>> stage Training <<<< Completed ! 
+
+ x==================x]
