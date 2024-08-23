@@ -5,7 +5,6 @@ from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
-
 st.set_page_config(layout="centered", page_title="Credit Decisions")
 
 
@@ -57,7 +56,7 @@ if page == "Credit Decisioning":
         final_input = np.array([gender, married, education, self_employed, applicant_income, coapplicant_income, loan_amount, loan_amount_term_days, credit_history, property_area]).reshape(1, -1)
 
         if st.button("Predict"): 
-            with open("model/model.pkl", "rb") as f:
+            with open("../model/model.pkl", "rb") as f:
                 model = pickle.load(f)
             output = model.predict(final_input)
             if output[0] == 0:

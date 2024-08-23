@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: credit-decisions
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: credit-decisions
+  template:
+    metadata:
+      labels:
+        app: credit-decisions
+    spec:
+      containers:
+      - name: credit-decisions
+        image: satyampsoni/credit-decisions:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+        ports:
+        - containerPort: 8501
