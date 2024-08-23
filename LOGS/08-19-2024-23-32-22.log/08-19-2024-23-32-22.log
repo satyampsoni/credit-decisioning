@@ -1,8 +1,0 @@
-[2024-08-19 23:32:24,573 - INFO - model_train -  >>>> stage Training <<<< started !]
-[2024-08-19 23:32:24,579 - ERROR - model_train - not enough values to unpack (expected 4, got 2)]
-Traceback (most recent call last):
-  File "/home/aman123lug/Desktop/credit-decisioning/src/model_train.py", line 65, in <module>
-    obj3.training(preprocess_path)
-  File "/home/aman123lug/Desktop/credit-decisioning/src/model_train.py", line 24, in training
-    X_train, X_test, y_train, y_test = train_test_split(preprocess_data, test_size=0.2, random_state=42)
-ValueError: not enough values to unpack (expected 4, got 2)
