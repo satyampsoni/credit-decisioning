@@ -97,7 +97,67 @@ The project will be accessbile at
 http://localhost:8501/
 ```
 
-### 
+## Deploy on Kubernetes (k3s) Managed by [Rancher by SUSE](https://www.rancher.com/products/rancher/?_gl=1*1v5bynd*_gcl_au*Mzg0Nzk3MTMxLjE3MjQ1MDE1MDI.*_ga*MTgwMzQ3Njk1NC4xNzIzNDg2Njkx*_ga_JEVBS2XFKK*MTcyNDQ5NDQ3My4xMC4xLjE3MjQ1MDE1MTIuNTAuMC4w)
+
+1. Prepare the linux host machine 
+   - Processor: 2 vCPUs
+   - Memory: 4 GB RAM
+   - Storage: 10 GB (available)
+   - operating system: Linux (SLES 15 SP4 or later is recommended).
+   - Docker installed
+
+2. Start the server
+   ```
+   $ sudo docker run --privileged -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+   ```
+
+3. To view the web UI, open your browser and navigate to the following address
+   ```
+   http://<your-host-ip>:80
+   ```
+4. Copy the following command and paste it into your terminal, replacing `container-id` with the actual ID of your Rancher server container:
+
+   ```
+   docker logs container-id 2>&1 | grep "Bootstrap Password:"
+   ```
+5. You will get a bootstrap password. Use this to log into the Rancher Dashboard by copying and pasting it
+
+ 6. The Rancher dashboard will load; click on the "Create" button to create a cluster.
+
+ 7. Enter the cluster details and in the base (kuberentes version) select the k3s one.
+
+ 8. upon clicking create button, you'll be directed to the Registration tab in step 2. Click on "_Insecure_" to bypass TLS verification, and then copy the curl command to and paste it to  register the Linux machine.
+
+9.  Go to manage cluster in the dashboard, select _credit-decisons_ cluster and download the kubeconfig file.
+
+10. To set the kubeconfig file as an environment variable in your terminal for deployment, you can use the export command
+   ```
+   export KUBECONFIG=/path/to/your/kubeconfig
+   ```
+11. clone the repository now 
+
+   ```
+   git clone https://github.com/satyampsoni/credit-decisioning.git
+   ```
+
+12. Navigate to the base directory, where [kustomization file](https://github.com/satyampsoni/credit-decisioning/blob/master/k8s/base/kustomization.yaml) is present
+
+   ```
+   cd credit-decisioning/k8s/base
+   ```
+
+13. Deploy the applcation
+
+   ```
+   kubectl apply -k .
+   ```
+_Note: The -k option tells kubectl to process the kustomization file in the directory._
+
+14. YOu can now access the application at the service:ip/<port>
+
+
+
+
 
 
 
