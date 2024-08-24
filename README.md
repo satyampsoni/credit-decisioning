@@ -41,7 +41,7 @@ Following are the input data that the application asks to make the decisions.
 
 1. Create a Virtual Environment, venv (you can name it anything you wish)
    ```
-   python3 -m venv .venv
+   python3 -m venv .venv //python3.10 or above 
    ```
   
 3. Activate the virtual environment.
@@ -84,12 +84,12 @@ Following are the input data that the application asks to make the decisions.
 
 1. Pull the Docker image
   ```
-  sudo docker pull satyamosoni/credit-decisions:latest
+  sudo docker pull satyampsoni/credit-decisions:latest
   ```
 2. Start the container
    
   ```
-    Sudo docker run -d -p 8501:8501 -it credit-decisions
+    sudo docker run -d -p 8501:8501 -it credit-decisions
    ```
 
 The project will be accessbile at
@@ -153,7 +153,10 @@ http://localhost:8501/
    ```
 _Note: The -k option tells kubectl to process the kustomization file in the directory._
 
-14. YOu can now access the application at the service:ip/<port>
+14. You can now access the application at the service-ip:<port>
+
+
+
 
 
 
