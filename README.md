@@ -1,5 +1,5 @@
 # Credit Decisioning 
-[EAnalytics Edge Ecosystem Workloads in Finance vertical](https://github.com/openSUSE/mentoring/issues/186) | [Google Summer of Code 2024, openSUSE](https://summerofcode.withgoogle.com/programs/2024/organizations/opensuse-project)
+[Analytics Edge Ecosystem Workloads in Finance vertical](https://github.com/openSUSE/mentoring/issues/186) | [Google Summer of Code 2024, openSUSE](https://summerofcode.withgoogle.com/programs/2024/organizations/opensuse-project)
 
 
 ## Overview
@@ -89,7 +89,7 @@ Following are the input data that the application asks to make the decisions.
 2. Start the container
    
   ```
-    sudo docker run -d -p 8501:8501 -it credit-decisions
+    docker run -p 8501:8501 satyampsoni/credit-decisions:latest
    ```
 
 The project will be accessbile at
@@ -115,22 +115,23 @@ http://localhost:8501/
    ```
    http://<your-host-ip>:80
    ```
-4. Copy the following command and paste it into your terminal, replacing `container-id` with the actual ID of your Rancher server container:
+   
+5. Copy the following command and paste it into your terminal, replacing `container-id` with the actual ID of your Rancher server container:
 
    ```
    docker logs container-id 2>&1 | grep "Bootstrap Password:"
    ```
-5. You will get a bootstrap password. Use this to log into the Rancher Dashboard by copying and pasting it
+6. You will get a bootstrap password. Use this to log into the Rancher Dashboard by copying and pasting it
 
- 6. The Rancher dashboard will load; click on the "Create" button to create a cluster.
+ 7. The Rancher dashboard will load; click on the "Create" button to create a cluster.
 
- 7. Enter the cluster details and in the base (kuberentes version) select the k3s one.
+ 8. Enter the cluster details and in the base (kuberentes version) select the k3s one.
 
- 8. upon clicking create button, you'll be directed to the Registration tab in step 2. Click on "_Insecure_" to bypass TLS verification, and then copy the curl command to and paste it to  register the Linux machine.
+ 9. upon clicking create button, you'll be directed to the Registration tab in step 2. Click on "_Insecure_" to bypass TLS verification, and then copy the curl command to and paste it to  register the Linux machine.
 
-9.  Go to manage cluster in the dashboard, select _credit-decisons_ cluster and download the kubeconfig file.
+10.  Go to manage cluster in the dashboard, select _credit-decisons_ cluster and download the kubeconfig file.
 
-10. To set the kubeconfig file as an environment variable in your terminal for deployment, you can use the export command
+11. To set the kubeconfig file as an environment variable in your terminal for deployment, you can use the export command
    ```
    export KUBECONFIG=/path/to/your/kubeconfig
    ```
