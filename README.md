@@ -156,6 +156,35 @@ _Note: The -k option tells kubectl to process the kustomization file in the dire
 
 14. You can now access the application at the service-ip:<port>
 
+## Technologies Used
+
+**Programming Language:**
+- Python
+
+**Machine Learning & Data Science:**
+- scikit-learn
+- pandas
+- numpy
+- MLflow (for experiment tracking)
+
+**Web Interface:**
+- Streamlit
+
+**Containerization & Deployment:**
+- Docker
+- Kubernetes (k3s)
+- Rancher (by openSUSE for cluster management)
+- Kustomize (for Kubernetes manifests)
+
+**CI/CD:**
+- GitHub Actions
+
+**Version Control & Collaboration:**
+- GitHub
+
+**Operating System (Deployment):**
+- openSUSE Linux (recommended for deployments)
+
 
 
 
